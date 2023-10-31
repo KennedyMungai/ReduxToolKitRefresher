@@ -1,3 +1,4 @@
+import { RootState } from '@/Redux/store'
 import { createSlice } from '@reduxjs/toolkit'
 
 interface IPosts {
@@ -16,5 +17,7 @@ const postsSlice = createSlice({
     initialState,
     reducers: {}
 })
+
+export const selectAllPosts = (state: RootState) => state.posts
 
 export default postsSlice.reducer
