@@ -3,6 +3,7 @@ import { Open_Sans } from 'next/font/google'
 import './globals.css'
 import NavBar from '@/components/NavBar/NavBar'
 import ThemeProvider from '@/Providers/ThemeProvider'
+import ReduxProvider from '@/Providers/ReduxProvider'
 
 const open_sans = Open_Sans({ subsets: ['latin'] })
 
@@ -20,8 +21,10 @@ export default function RootLayout({
 		<html lang='en' suppressHydrationWarning>
 			<body className={open_sans.className}>
 				<ThemeProvider>
-					<NavBar />
-					{children}
+					<ReduxProvider>
+						<NavBar />
+						{children}
+					</ReduxProvider>
 				</ThemeProvider>
 			</body>
 		</html>
