@@ -17,14 +17,21 @@ const AddCounter = (props: Props) => {
 	const count = useAppSelector((state) => state.counter.count)
 
 	return (
-		<div className=''>
-			<Button variant={'outline'} onClick={() => dispatch(increment)}>
-				<BsPlus />
-			</Button>
-			<span className='my-5'>{count}</span>
-			<Button variant={'outline'} onClick={() => dispatch(decrement)}>
-				<AiOutlineMinus />
-			</Button>
+		<div className='flex flex-col items-center gap-5 bg-zinc-100 p-5 rounded-md border-[1px] border-zinc-500'>
+			<div className=''>
+				<p className='text-orange-500'>
+					Increment And Decrement by One
+				</p>
+			</div>
+			<div className=''>
+				<Button variant={'outline'} onClick={() => dispatch(increment)}>
+					<BsPlus />
+				</Button>
+				<span className='my-5'>{count}</span>
+				<Button variant={'outline'} onClick={() => dispatch(decrement)}>
+					<AiOutlineMinus />
+				</Button>
+			</div>
 		</div>
 	)
 }
