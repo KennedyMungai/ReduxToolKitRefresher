@@ -21,7 +21,7 @@ const PostsList = (props: Props) => {
 
 	return (
 		<section>
-			<h2 className='text-center uppercase text-zinc-800 font-bold text-3xl underline'>
+			<h2 className='text-center uppercase text-zinc-500 font-bold text-3xl underline'>
 				Posts
 			</h2>
 			{renderedPosts}
