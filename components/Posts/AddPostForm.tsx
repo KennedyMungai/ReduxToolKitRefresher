@@ -29,7 +29,7 @@ const AddPostForm = () => {
 
 	return (
 		<section className='w-screen h-[90vh] bg-zinc-100 dark:bg-zinc-800 p-5 rounded-md flex flex-col justify-center items-center gap-2'>
-			<h2>Add a new post</h2>
+			<h2 className='uppercase text-2xl underline'>Add a new post</h2>
 			<form className='flex flex-col gap-2'>
 				<div className=''>
 					<label htmlFor='postTitle'>Post Title: </label>
@@ -39,6 +39,7 @@ const AddPostForm = () => {
 						name='postTitle'
 						value={title}
 						onChange={onTitleChanged}
+						className='w-full p-2 rounded-sm'
 					/>
 				</div>
 				<div className=''>
@@ -48,6 +49,7 @@ const AddPostForm = () => {
 						name='postContent'
 						value={content}
 						onChange={onContextChanged}
+						className='w-full p-2 rounded-sm'
 					/>
 				</div>
 			</form>
