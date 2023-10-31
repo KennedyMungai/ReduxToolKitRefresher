@@ -10,7 +10,7 @@ const PostsList = (props: Props) => {
 	const renderedPosts = posts.map((post) => (
 		<article
 			key={post.id}
-			className='bg-zinc-50 m-2 p-2 rounded-md border-[1px] border-zinc-400'
+			className='bg-zinc-50 m-2 p-2 rounded-md border-[1px] border-zinc-400 dark:bg-zinc-900'
 		>
 			<h3 className='uppercase font-semibold text-center'>
 				{post.title}
