@@ -1,6 +1,8 @@
 import { selectAllPosts } from '@/Redux/features/posts/postsSlice'
 import { useAppSelector } from '@/Redux/hooks'
 import React from 'react'
+import { Button } from '../ui/button'
+import Link from 'next/link'
 
 type Props = {}
 
@@ -20,10 +22,14 @@ const PostsList = (props: Props) => {
 	))
 
 	return (
-		<section>
+		<section className='flex flex-col items-center gap-2'>
 			<h2 className='text-center uppercase text-zinc-500 font-bold text-3xl underline'>
 				Posts
 			</h2>
+			<Link href='/addPost'>
+				<Button variant={'outline'}>Add a post</Button>
+			</Link>
+
 			{renderedPosts}
 		</section>
 	)
