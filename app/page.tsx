@@ -1,9 +1,7 @@
-import AddCounter from '@/components/Counter/AddCounter'
+'use client'
 
 export default function Home() {
 	return (
-		<main className='w-screen h-[90vh] flex flex-col items-center justify-center gap-5'>
-			<AddCounter />
-		</main>
+		<main className='w-screen h-[90vh] flex flex-col items-center justify-center gap-5'></main>
 	)
 }
