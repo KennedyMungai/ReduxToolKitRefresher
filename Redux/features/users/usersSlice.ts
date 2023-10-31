@@ -1,3 +1,4 @@
+import { RootState } from '@/Redux/store'
 import { createSlice } from '@reduxjs/toolkit'
 
 interface IUsers {
@@ -16,5 +17,7 @@ const usersSlice = createSlice({
     initialState,
     reducers: {}
 })
+
+export const selectAllUsers = (state: RootState) => state.users
 
 export default usersSlice.reducer
