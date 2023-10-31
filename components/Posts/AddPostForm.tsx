@@ -44,7 +44,9 @@ const AddPostForm = () => {
 					value={content}
 					onChange={onContextChanged}
 				/>
-				<button type='submit'>Save Button</button>
+				<button type='submit' onClick={onSavePostClicked}>
+					Save Button
+				</button>
 			</form>
 		</section>
 	)
