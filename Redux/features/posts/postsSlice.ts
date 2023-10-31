@@ -15,8 +15,14 @@ const initialState: IPosts[] = [
 const postsSlice = createSlice({
     name: 'Posts',
     initialState,
-    reducers: {}
+    reducers: {
+        postAdded: (state, action) => {
+            state.push(action.payload)
+        }
+    }
 })
+
+export const { postAdded } = postsSlice.actions
 
 export const selectAllPosts = (state: RootState) => state.posts
 
